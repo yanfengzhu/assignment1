@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var GraphSchema = new mongoose.Schema({
-  Country: String,
+  County: String,
   numberOfdeaths: Number,
 }, 
 {
