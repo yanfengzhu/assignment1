@@ -39,14 +39,16 @@ function formatDataTable(chartdata) {
 function getOptions()
 {
      var options = {
-        title: '2013 Death in Maryland State',
+        title: '2013 Drug and Alcohol-Related Intoxication Deaths by County of Maryland State',
+        width: 900,
+        height: 700,
         chartArea: {width: '50%'},
         hAxis: {
-          title: 'Number',
+          title: 'Number of Death',
           minValue: 0
         },
         vAxis: {
-          title: 'Type of Disease'
+          title: ''
         }
       };
 
