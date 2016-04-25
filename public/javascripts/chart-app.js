@@ -1,18 +1,12 @@
+
 var app = angular.module('simple-chart', []);
+google.load("visualization", "1", {packages:["corechart"]});
 
-app.controller('MainCtrl', function($scope, $http) {
-  $http.get("https://assignment-1-yanfengzhu-1.c9users.io/data").then(function (response) {
-    
-      google.charts.load('current', {packages: ['corechart', 'bar']});
-      google.charts.setOnLoadCallback(function() {
-        formatDataTable(response.data);
-        
-
-       
-      });
+app.controller('MainCtrl', ['$scope', '$http',  function($scope, $http) {
+  $http.get("/data").success(function (data) {
+        formatDataTable(data);
   });
-});
-
+}]);
 
 
 function formatDataTable(chartdata) {
@@ -28,8 +22,6 @@ function formatDataTable(chartdata) {
     temp.push(chartdata[i].Number);
     data.push(temp);
   }
-   
-   console.table(data);
    
   var g_data = google.visualization.arrayToDataTable(data);
   var chart = new google.visualization.BarChart(document.getElementById('chart_div'));

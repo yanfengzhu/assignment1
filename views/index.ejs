@@ -1,46 +1,11 @@
-<html lang="en">
-  <head>
-    
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Maryland State Deaths</title>
-    
-    
-    
-    <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="/stylesheets/justified-nav.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript" src="javascripts/chart-app.js"></script>
-   
-  </head>
-  
-<body ng-app="simple-chart">
-    
-  
-   <div class="container" >
-      <div class="masthead">
-        <h3 class="text-muted">Yanfeng Zhu</h3>
-        <nav>
-          <ul class="nav nav-justified">
-            <li><a href="#" ng-click="show = !show">Show/Hide the Graph</a></li>
-          </ul>
-        </nav>
-      </div>
-
-<div class="jumbotron" >
-        <div ng-controller="MainCtrl" ng-show="show">
-      <div id="chart_div" style="width: 500px; height: 500px;" ></div>
-    </div>
-      </div>
-  
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="javascripts/chart-app.js"></script>
+<body>
+  <div ng-app="simple-chart" ng-controller="MainCtrl"> 
+    <div id="chart_div" style="width: 900px; height: 600px;"></div>
+  </div>
 </body>
+</html>
